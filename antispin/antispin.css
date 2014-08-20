@@ -1,0 +1,67 @@
+.outside-spin {
+  position: relative;
+  height: 200px;
+  width:  200px;
+  margin: 50px auto;
+  animation: spin 4s linear 0s infinite;
+}
+
+.inside-spin {
+  position: absolute;
+  height: 100px;
+  width:  100px;
+  animation: antispin 1s linear 0s infinite;
+}
+.hand-1 {
+  left: 50px; /* center horizontally */
+  top:  0px;  /* start at 12 o'clock */
+}
+.hand-2 {
+  left: 50px;  /* center horizontally */
+  top:  100px; /* start at 6 o'clock  */
+}
+
+.ball {
+  position: absolute;
+  height: 30px;
+  width:  30px;
+  left:   35px;
+  border-radius: 50%;
+}
+.ball-1 {
+  background: rgba(255,0,0,0.5);
+}
+.ball-2 {
+  background: rgba(0,255,0,0.5);
+  top: 70px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antispin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/*
+@keyframes two {
+  25% {
+    transform: translateX(-200%) translateY(0%);
+  }
+  50% {
+    transform: translateX(0%) translateY(200%);
+  }
+  75% {
+    transform: translateX(200%) translateY(0%);
+  }
+  100% {
+    transform: translateX(0%) translateY(-200%);
+  }
+}
+*/
+
