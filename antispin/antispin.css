@@ -45,6 +45,15 @@
   background: #1f31ff;
   top: 70px; }
 
+.shadow {
+  position: relative;
+  top: -250px;
+  opacity: 0.5; }
+  .shadow .outside-spin {
+    animation-delay: 0.1s; }
+  .shadow .inside-spin {
+    animation-delay: 0.1s; }
+
 @keyframes spin {
   100% {
     transform: rotate(360deg); } }

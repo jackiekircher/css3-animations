@@ -3,8 +3,8 @@ $inner-diameter: $outer-diameter/2;
 $ball-diameter:  30px;
 $grid-padding:   20px;
 
-$color-1: rgb(255,149,0); /* orange */
-$color-2: rgb(31,49,255); /* blue */
+$color-1: rgba(255,149,0,1); /* orange */
+$color-2: rgba(31,49,255,1); /* blue */
 
 #animation {
   height: $outer-diameter + $grid-padding*2;
@@ -49,6 +49,19 @@ $color-2: rgb(31,49,255); /* blue */
 .ball-2 {
   background: $color-2;
   top: $inner-diameter - $ball-diameter;
+}
+
+.shadow {
+  position: relative;
+  top: -($outer-diameter + $grid-padding*2) - 10px;
+  opacity: 0.5;
+
+  .outside-spin {
+    animation-delay: 0.1s;
+  }
+  .inside-spin {
+    animation-delay: 0.1s;
+  }
 }
 
 @keyframes spin {
