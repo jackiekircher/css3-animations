@@ -1,68 +1,53 @@
+/* orange */
+/* blue */
+#animation {
+  height: 240px;
+  width: 420px;
+  background-size: 30px 30px; }
+
 .outside-spin {
   position: relative;
   height: 200px;
-  width:  200px;
+  width: 200px;
   margin: 50px auto;
   top: 20px;
-  animation: spin 4s linear 0s infinite;
-}
+  animation: spin 4s linear 0s infinite; }
 
 .inside-spin {
   position: absolute;
   height: 100px;
-  width:  100px;
-  animation: antispin 1s linear 0s infinite;
-}
+  width: 100px;
+  animation: antispin 1s linear 0s infinite; }
+
 .hand-1 {
-  left: 50px; /* center horizontally */
-  top:  0px;  /* start at 12 o'clock */
-}
+  left: 50px;
+  /* center horizontally */
+  top: 0px;
+  /* start at 12 o'clock */ }
+
 .hand-2 {
-  left: 50px;  /* center horizontally */
-  top:  100px; /* start at 6 o'clock  */
-}
+  left: 50px;
+  /* center horizontally */
+  top: 100px;
+  /* start at 6 o'clock  */ }
 
 .ball {
   position: absolute;
   height: 30px;
-  width:  30px;
-  left:   35px;
-  border-radius: 50%;
-}
+  width: 30px;
+  left: 35px;
+  border-radius: 50%; }
+
 .ball-1 {
-  background: rgba(255,149,0,1);
-}
+  background: #ff9500; }
+
 .ball-2 {
-  background: rgba(31,49,255,1);
-  top: 70px;
-}
+  background: #1f31ff;
+  top: 70px; }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg);
-  }
-}
-
+    transform: rotate(360deg); } }
 @keyframes antispin {
   100% {
-    transform: rotate(-360deg);
-  }
-}
-
-/*
-@keyframes two {
-  25% {
-    transform: translateX(-200%) translateY(0%);
-  }
-  50% {
-    transform: translateX(0%) translateY(200%);
-  }
-  75% {
-    transform: translateX(200%) translateY(0%);
-  }
-  100% {
-    transform: translateX(0%) translateY(-200%);
-  }
-}
-*/
-
+    transform: rotate(-360deg); } }

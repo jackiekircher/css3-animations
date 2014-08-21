@@ -26,9 +26,6 @@ body {
       rgba(0,0,0,.20) 99%,
       rgba(0,0,0,.20) 100%,
       transparent);
-  height: 240px;
-  width:  420px;
-  background-size: 30px 30px;
   margin: auto;
 }
 
