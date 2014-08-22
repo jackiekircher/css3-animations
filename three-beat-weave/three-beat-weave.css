@@ -16,8 +16,6 @@
   position: absolute;
   height:   100%;
   width:    100%;
-  left:    -100%;
-  top:     -110%;
   z-index:  1;
   margin-left:  -50%;
   margin-top:   -50%;
@@ -25,6 +23,8 @@
 }
 
 .ball-1:before {
+  left:    -100%;
+  top:     -110%;
   background: rgba(255,149,0,1);
   animation:  lead 6s infinite
                 -.5s cubic-bezier(0.25,0,0.75,1),
@@ -32,11 +32,13 @@
                 -1s cubic-bezier(0.25,0,0.75,1);
 }
 .ball-2:before {
+  left:     100%;
+  top:      110%;
   background: rgba(31,49,255,1);
-  animation: tail 4s infinite
+  animation: tail 6s infinite
                0s cubic-bezier(0.25,0,0.75,1),
              size 2s infinite
-               -.5s cubic-bezier(0.25,0,0.75,1);
+               -0.5s cubic-bezier(0.25,0,0.75,1);
 }
 
 @keyframes lead {
@@ -50,7 +52,7 @@
   16.7%  {
     left: -100%;
     top:   110%;
-    z-index: 100;
+    z-index: 0;
   }
 
   25%  {
@@ -61,7 +63,7 @@
   33.3%  {
     left: -100%;
     top:  -110%;
-    z-index: 0;
+    z-index: 100;
   }
 
   41.7%  {
@@ -71,13 +73,13 @@
   /* bottom left */
   50%  {
     top:   110%;
-    z-index: 100;
+    z-index: 0;
   }
 
   /* top right */
   66.7%  {
     top:  -110%;
-    z-index: 0;
+    z-index: 100;
   }
 
   75%  {
@@ -87,17 +89,51 @@
   /* bottom right */
   83.3%  {
     top:   110%;
-    z-index: 100;
+    z-index: 0;
   }
 }
 
 @keyframes tail {
-  15%  { left: -100%; }
-  25%  { top:   110%; z-index: 0; }   /* bottom right */
-  50%  { top:  -110%; z-index: 100; } /* top left */
-  65%  { left:  100%; }
-  75%  { top:   110%; z-index: 0; }   /* bottom left */
-  100% { top:  -110%; z-index: 100; } /* top right */
+  /* 0% bottom right */
+
+  /* top left */
+  16.7%  {
+    top:  -110%;
+    z-index: 100;
+  }
+
+  25%   {
+    left: -100%;
+  }
+
+  /* bottom left */
+  33.3%  {
+    top:   110%;
+    z-index: 0;
+  }
+
+  41.7%  {
+    left:  100%;
+  }
+
+  /* top right */
+  50%  {
+    top:  -110%;
+    z-index: 100;
+  }
+
+  /* bottom right */
+  66.7%  {
+    left:  100%;
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top right */
+  83.3%  {
+    top:  -110%;
+    z-index: 100;
+  }
 }
 
 @keyframes size {
