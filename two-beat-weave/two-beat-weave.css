@@ -1,113 +1,62 @@
+#animation {
+  position: absolute;
+  height:   100%;
+  width:    100%;
+}
 
 .ball {
-  height: 50px;
-  width: 50px;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  height:   50px;
+  width:    50px;
+  left:     50%;
+  top:      50%;
 }
 .ball:before {
-  content: '';
+  content:  '';
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height:   100%;
+  width:    100%;
+  left:    -100%;
+  top:     -110%;
+  z-index:  1;
+  margin-left:  -50%;
+  margin-top:   -50%;
   border-radius: 50%;
-  margin-left: -50%;
-  margin-top: -50%;
-  left: -100%;
-  top: -100%;
-  z-index: 1;
-
 }
 
 .ball-1:before {
   background: rgba(255,149,0,1);
-  animation: lead 4s infinite -.5s cubic-bezier(0.25,0,0.75,1),
-             size 4s infinite -1s cubic-bezier(0.25,0,0.75,1);
+  animation:  lead 4s infinite
+                -.5s cubic-bezier(0.25,0,0.75,1),
+              size 2s infinite
+                -1s cubic-bezier(0.25,0,0.75,1);
 }
 .ball-2:before {
   background: rgba(31,49,255,1);
-  animation: tail 4s infinite cubic-bezier(0.25,0,0.75,1),
-             size 4s infinite -.5s cubic-bezier(0.25,0,0.75,1);
-}
-
-.spinner {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  animation: tail 4s infinite
+               0s cubic-bezier(0.25,0,0.75,1),
+             size 2s infinite
+               -.5s cubic-bezier(0.25,0,0.75,1);
 }
 
 @keyframes lead {
-  20% {
-    left: -100%;
-  }
-  /* bottom right */
-  25% {
-    top: 100%;
-    z-index: 100;
-  }
-  /* top left */
-  50% {
-    top: -100%;
-    z-index: 0;
-  }
-  70% {
-    left: 100%;
-  }
-  /* bottom left */
-  75% {
-    top: 100%;
-    z-index: 100;
-  }
-  /* top right */
-  100% {
-    top: -100%;
-    z-index: 0;
-  }
+  15%  { left: -100%; }
+  25%  { top:   110%; z-index: 100; } /* bottom right */
+  50%  { top:  -110%; z-index: 0; }   /* top left */
+  65%  { left:  100%; }
+  75%  { top:   110%; z-index: 100; } /* bottom left */
+  100% { top:  -110%; z-index: 0; }   /* top right */
 }
 
 @keyframes tail {
-  20% {
-    left: -100%;
-  }
-  /* bottom right */
-  25% {
-    top: 100%;
-    z-index: 0;
-  }
-  /* top left */
-  50% {
-    top: -100%;
-    z-index: 100;
-  }
-  70% {
-    left: 100%;
-  }
-  /* bottom left */
-  75% {
-    top: 100%;
-    z-index: 0;
-  }
-  /* top right */
-  100% {
-    top: -100%;
-    z-index: 100;
-  }
+  15%  { left: -100%; }
+  25%  { top:   110%; z-index: 0; }   /* bottom right */
+  50%  { top:  -110%; z-index: 100; } /* top left */
+  65%  { left:  100%; }
+  75%  { top:   110%; z-index: 0; }   /* bottom left */
+  100% { top:  -110%; z-index: 100; } /* top right */
 }
 
 @keyframes size {
-  25% {
-    transform: scale(.5,.5);
-  }
-  50% {
-    transform: scale(1,1);
-  }
-  75% {
-    transform: scale(.5,.5);
-  }
-  100% {
-    transform: scale(1,1);
-  }
+  50% { transform: scale(.5,.5); }
 }
-
-/*# sourceMappingURL=two-beat-weave-2.css.map */
