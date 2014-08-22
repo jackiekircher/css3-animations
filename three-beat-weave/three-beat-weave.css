@@ -26,7 +26,7 @@
 
 .ball-1:before {
   background: rgba(255,149,0,1);
-  animation:  lead 8s infinite
+  animation:  lead 6s infinite
                 -.5s cubic-bezier(0.25,0,0.75,1),
               size 2s infinite
                 -1s cubic-bezier(0.25,0,0.75,1);
@@ -42,41 +42,30 @@
 @keyframes lead {
   /* 0% top left */
 
-  5%   {
+  8.3%   {
     left: -100%;
   }
 
   /* bottom left */
-  10%  {
+  16.7%  {
     left: -100%;
     top:   110%;
     z-index: 100;
   }
 
-  15%  {
+  25%  {
     left: -100%;
   }
 
   /* top left */
-  20%  {
+  33.3%  {
+    left: -100%;
     top:  -110%;
     z-index: 0;
   }
 
-  /* bottom right */
-  30%  {
-    top:   110%;
-    z-index: 100;
-  }
-
-  35%  {
-    left: 100%;
-  }
-
-  /* top right */
-  40%  {
-    top:  -110%;
-    z-index: 0;
+  41.7%  {
+    left: -100%;
   }
 
   /* bottom left */
@@ -85,47 +74,20 @@
     z-index: 100;
   }
 
-  55%  {
-    left: -100%;
-  }
-
-  /* top left */
-  60%  {
-    left: -100%;
-    top:  -110%;
-    z-index: 0;
-  }
-
-  65%  {
-    left: -100%;
-  }
-
-  /* bottom left */
-  70%  {
-    top:   110%;
-    z-index: 100;
-  }
-
   /* top right */
-  80%  {
+  66.7%  {
     top:  -110%;
     z-index: 0;
   }
 
-  85%  {
+  75%  {
     left: 100%;
   }
 
   /* bottom right */
-  90%  {
+  83.3%  {
     top:   110%;
     z-index: 100;
-  }
-
-  /* top left */
-  100% {
-    top:  -110%;
-    z-index: 0;
   }
 }
 
