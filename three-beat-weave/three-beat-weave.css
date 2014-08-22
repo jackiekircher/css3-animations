@@ -30,6 +30,10 @@
                 -.5s cubic-bezier(0.25,0,0.75,1),
               size 2s infinite
                 -1s cubic-bezier(0.25,0,0.75,1);
+  -webkit-animation:  lead 6s infinite
+                        -.5s cubic-bezier(0.25,0,0.75,1),
+                      size 2s infinite
+                        -1s cubic-bezier(0.25,0,0.75,1);
 }
 .ball-2:before {
   left:    -100%;
@@ -39,6 +43,10 @@
                .5s cubic-bezier(0.25,0,0.75,1),
              size 2s infinite
                0s cubic-bezier(0.25,0,0.75,1);
+  -webkit-animation:  tail 6s infinite
+                        .5s cubic-bezier(0.25,0,0.75,1),
+                      size 2s infinite
+                        0s cubic-bezier(0.25,0,0.75,1);
 }
 
 @keyframes lead {
@@ -149,4 +157,115 @@
 
 @keyframes size {
   50% { transform: scale(.5,.5); }
+}
+
+/* for webkit */
+@-webkit-keyframes lead {
+  /* 0% top left */
+
+  8.3%   {
+    left: -100%;
+  }
+
+  /* bottom left */
+  16.7%  {
+    left: -100%;
+    top:   110%;
+    z-index: 0;
+  }
+
+  25%  {
+    left: -100%;
+  }
+
+  /* top left */
+  33.3%  {
+    left: -100%;
+    top:  -110%;
+    z-index: 100;
+  }
+
+  41.7%  {
+    left: -100%;
+  }
+
+  /* bottom left */
+  50%  {
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top right */
+  66.7%  {
+    top:  -110%;
+    z-index: 0;
+  }
+
+  75%  {
+    left: 100%;
+  }
+
+  /* bottom right */
+  83.3%  {
+    top:   110%;
+    z-index: 0;
+  }
+}
+
+@-webkit-keyframes tail {
+  /* 0% top left */
+
+  8.3% {
+    left: -100%;
+  }
+
+  /* bottom left */
+  16.7% {
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top right */
+  33.3% {
+    top:  -110%;
+    z-index: 100;
+  }
+
+  41.7% {
+    left:  100%;
+  }
+
+  /* bottom right */
+  50%   {
+    left:  100%;
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top right */
+  66.7% {
+    left:  100%;
+    top:  -110%;
+    z-index: 100;
+  }
+
+  75%   {
+    left: 100%;
+  }
+
+  /* bottom right */
+  83.3% {
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top left */
+  100%  {
+    top: -110%;
+    z-index: 100;
+  }
+}
+
+@-webkit-keyframes size {
+  50% { -webkit-transform: scale(.5,.5); }
 }
