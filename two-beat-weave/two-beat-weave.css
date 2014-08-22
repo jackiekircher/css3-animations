@@ -1,0 +1,113 @@
+
+.ball {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.ball:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  margin-left: -50%;
+  margin-top: -50%;
+  left: -100%;
+  top: -100%;
+  z-index: 1;
+
+}
+
+.ball-1:before {
+  background: rgba(255,149,0,1);
+  animation: lead 4s infinite -.5s cubic-bezier(0.25,0,0.75,1),
+             size 4s infinite -1s cubic-bezier(0.25,0,0.75,1);
+}
+.ball-2:before {
+  background: rgba(31,49,255,1);
+  animation: tail 4s infinite cubic-bezier(0.25,0,0.75,1),
+             size 4s infinite -.5s cubic-bezier(0.25,0,0.75,1);
+}
+
+.spinner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@keyframes lead {
+  20% {
+    left: -100%;
+  }
+  /* bottom right */
+  25% {
+    top: 100%;
+    z-index: 100;
+  }
+  /* top left */
+  50% {
+    top: -100%;
+    z-index: 0;
+  }
+  70% {
+    left: 100%;
+  }
+  /* bottom left */
+  75% {
+    top: 100%;
+    z-index: 100;
+  }
+  /* top right */
+  100% {
+    top: -100%;
+    z-index: 0;
+  }
+}
+
+@keyframes tail {
+  20% {
+    left: -100%;
+  }
+  /* bottom right */
+  25% {
+    top: 100%;
+    z-index: 0;
+  }
+  /* top left */
+  50% {
+    top: -100%;
+    z-index: 100;
+  }
+  70% {
+    left: 100%;
+  }
+  /* bottom left */
+  75% {
+    top: 100%;
+    z-index: 0;
+  }
+  /* top right */
+  100% {
+    top: -100%;
+    z-index: 100;
+  }
+}
+
+@keyframes size {
+  25% {
+    transform: scale(.5,.5);
+  }
+  50% {
+    transform: scale(1,1);
+  }
+  75% {
+    transform: scale(.5,.5);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+/*# sourceMappingURL=two-beat-weave-2.css.map */
