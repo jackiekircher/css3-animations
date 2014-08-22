@@ -1,0 +1,127 @@
+#animation {
+  position: absolute;
+  height:   100%;
+  width:    100%;
+}
+
+.ball {
+  position: absolute;
+  height:   50px;
+  width:    50px;
+  left:     50%;
+  top:      50%;
+}
+.ball:before {
+  content:  '';
+  position: absolute;
+  height:   100%;
+  width:    100%;
+  left:    -100%;
+  top:     -110%;
+  z-index:  1;
+  margin-left:  -50%;
+  margin-top:   -50%;
+  border-radius: 50%;
+}
+
+.ball-1:before {
+  background: rgba(255,149,0,1);
+  animation:  lead 8s infinite
+                -.5s cubic-bezier(0.25,0,0.75,1),
+              size 2s infinite
+                -1s cubic-bezier(0.25,0,0.75,1);
+}
+.ball-2:before {
+  background: rgba(31,49,255,1);
+  animation: tail 4s infinite
+               0s cubic-bezier(0.25,0,0.75,1),
+             size 2s infinite
+               -.5s cubic-bezier(0.25,0,0.75,1);
+}
+
+@keyframes lead {
+  /* 0% top left */
+
+  /* bottom left */
+  10%  {
+    left: -100%;
+    top:   110%;
+    z-index: 100;
+  }
+
+  /* top left */
+  20%  {
+    left: -100%;
+    top:  -110%;
+    z-index: 0;
+  }
+
+  /* bottom right */
+  30%  {
+    left:  100%;
+    top:   110%;
+    z-index: 100;
+  }
+
+  /* top right */
+  40%  {
+    left:  100%;
+    top:  -110%;
+    z-index: 100;
+  }
+
+  /* bottom left */
+  50%  {
+    left: -100%;
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top left */
+  60%  {
+    left: -100%;
+    top:  -110%;
+    z-index: 100;
+  }
+
+  /* bottom left */
+  70%  {
+    left: -100%;
+    top:   110%;
+    z-index: 0;
+  }
+
+  /* top right */
+  80%  {
+    left:  100%;
+    top:  -110%;
+    z-index: 100;
+  }
+
+  /* bottom right */
+  90%  {
+    left:  100%;
+    top:   110%;
+    z-index: 100;
+  }
+
+  /* top left */
+  100% {
+    left: -100%;
+    top:  -110%;
+    z-index: 0;
+  }
+}
+
+@keyframes tail {
+  15%  { left: -100%; }
+  25%  { top:   110%; z-index: 0; }   /* bottom right */
+  50%  { top:  -110%; z-index: 100; } /* top left */
+  65%  { left:  100%; }
+  75%  { top:   110%; z-index: 0; }   /* bottom left */
+  100% { top:  -110%; z-index: 100; } /* top right */
+}
+
+@keyframes size {
+  50% { transform: scale(.5,.5); }
+}
