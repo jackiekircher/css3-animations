@@ -1,0 +1,43 @@
+/* orange */
+/* blue */
+#animation {
+  position: relative;
+  height: 240px;
+  width: 420px;
+  background-size: 40px 40px;
+  margin: 50px auto; }
+
+.inside-spin {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 110px;
+  top: 20px; }
+
+.hand-1 {
+  animation: spin 2s linear 0s infinite; }
+
+.hand-2 {
+  animation: antispin 2s linear 0s infinite; }
+
+.ball {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 80px;
+  border-radius: 50%; }
+
+.ball-1 {
+  background: rgba(255, 149, 0, 0.8);
+  z-index: 100; }
+
+.ball-2 {
+  background: rgba(31, 49, 255, 0.8);
+  z-index: 0; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); } }
+@keyframes antispin {
+  100% {
+    transform: rotate(-360deg); } }

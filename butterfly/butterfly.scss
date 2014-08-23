@@ -1,0 +1,57 @@
+$grid-height: 240px;
+$grid-width:  420px;
+$circle-diameter: 200px;
+$ball-diameter:   40px;
+
+$color-1: rgba(255,149,0,0.8); /* orange */
+$color-2: rgba(31,49,255,0.8); /* blue */
+
+#animation {
+  position: relative;
+  height: $grid-height;
+  width:  $grid-width;
+  background-size: $ball-diameter $ball-diameter;
+  margin: 50px auto;
+}
+
+.inside-spin {
+  position: absolute;
+  height: $circle-diameter;
+  width:  $circle-diameter;
+  left: $grid-width/2 - $circle-diameter/2;
+  top:  $grid-height/2 - $circle-diameter/2;
+}
+.hand-1 {
+  animation: spin 2s linear 0s infinite;
+}
+.hand-2 {
+  animation: antispin 2s linear 0s infinite;
+}
+
+.ball {
+  position: absolute;
+  height: $ball-diameter;
+  width:  $ball-diameter;
+  left:   ($circle-diameter/2) - ($ball-diameter/2);
+  border-radius: 50%;
+}
+.ball-1 {
+  background: $color-1;
+  z-index: 100;
+}
+.ball-2 {
+  background: $color-2;
+  z-index: 0;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antispin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
