@@ -1,0 +1,78 @@
+/* orange */
+/* blue */
+#animation {
+  position: relative;
+  height: 120px;
+  width: 180px;
+  background-size: 30px 30px;
+  margin: 50px auto; }
+
+.inside-spin {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 40px;
+  top: 10px; }
+
+.hand-1 {
+  z-index: 100;
+  animation: spin 3s linear 0s infinite;
+  -webkit-animation: spin 3s linear 0s infinite; }
+
+.hand-2 {
+  z-index: 0;
+  animation: antispin 3s linear 0s infinite;
+  -webkit-animation: antispin 3s linear 0s infinite; }
+
+.ball {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 35px;
+  border-radius: 50%;
+  z-index: 1; }
+
+.ball-1 {
+  background: #ff9500;
+  animation: size 3s cubic-bezier(0.25, 0, 0.75, 1) 0s infinite;
+  -webkit-animation: size 3s cubic-bezier(0.25, 0, 0.75, 1) 0s infinite; }
+
+.ball-2 {
+  background: #1f31ff;
+  animation: size 3s cubic-bezier(0.25, 0, 0.75, 1) -1.5s infinite;
+  -webkit-animation: size 3s cubic-bezier(0.25, 0, 0.75, 1) -1.5s infinite; }
+
+@keyframes spin {
+  37.5% {
+    z-index: 0; }
+  87.5% {
+    z-index: 100; }
+  100% {
+    transform: rotate(720deg); } }
+@-webkit-keyframes spin {
+  37.5% {
+    z-index: 0; }
+  87.5% {
+    z-index: 100; }
+  100% {
+    -webkit-transform: rotate(720deg); } }
+@keyframes antispin {
+  37.5% {
+    z-index: 100; }
+  87.5% {
+    z-index: 0; }
+  100% {
+    transform: rotate(-720deg); } }
+@-webkit-keyframes antispin {
+  37.5% {
+    z-index: 100; }
+  87.5% {
+    z-index: 0; }
+  100% {
+    -webkit-transform: rotate(-720deg); } }
+@keyframes size {
+  50% {
+    transform: scale(0.5, 0.5); } }
+@-webkit-keyframes size {
+  50% {
+    -webkit-transform: scale(0.5, 0.5); } }
