@@ -23,9 +23,11 @@ $color-2: rgba(31,49,255,0.8); /* blue */
 }
 .hand-1 {
   animation: spin 2s linear 0s infinite;
+  -webkit-animation: spin 2s linear 0s infinite;
 }
 .hand-2 {
   animation: antispin 2s linear 0s infinite;
+  -webkit-animation: antispin 2s linear 0s infinite;
 }
 
 .ball {
@@ -49,9 +51,19 @@ $color-2: rgba(31,49,255,0.8); /* blue */
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 
 @keyframes antispin {
   100% {
     transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes antispin {
+  100% {
+    -webkit-transform: rotate(-360deg);
   }
 }

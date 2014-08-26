@@ -19,6 +19,7 @@ $color-2: rgba(31,49,255,1); /* blue */
   margin: 50px auto;
   top: $grid-padding;
   animation: spin 4s linear 0s infinite;
+  -webkit-animation: spin 4s linear 0s infinite;
 }
 
 .inside-spin {
@@ -26,6 +27,7 @@ $color-2: rgba(31,49,255,1); /* blue */
   height: $inner-diameter;
   width:  $inner-diameter;
   animation: antispin 1s linear 0s infinite;
+  -webkit-animation: antispin 1s linear 0s infinite;
 }
 .hand-1 {
   left: $inner-diameter/2; /* center horizontally */
@@ -58,9 +60,11 @@ $color-2: rgba(31,49,255,1); /* blue */
 
   .outside-spin {
     animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
   }
   .inside-spin {
     animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
   }
 }
 
@@ -69,9 +73,19 @@ $color-2: rgba(31,49,255,1); /* blue */
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 
 @keyframes antispin {
   100% {
     transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes antispin {
+  100% {
+    -webkit-transform: rotate(-360deg);
   }
 }

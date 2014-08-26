@@ -18,11 +18,15 @@
 }
 .ball-1:before {
   transform: translateY(200%);
+  -webkit-transform: translateY(200%);
   animation: one 1.5s ease-in 0s infinite alternate;
+  -webkit-animation: one 1.5s ease-in 0s infinite alternate;
 }
 .ball-2:before {
   transform: translateY(-200%);
+  -webkit-transform: translateY(-200%);
   animation: two 1.5s ease-in 0s infinite alternate;
+  -webkit-animation: two 1.5s ease-in 0s infinite alternate;
 }
 
 @keyframes one {
@@ -39,6 +43,20 @@
     transform: translateX(0%) translateY(200%);
   }
 }
+@-webkit-keyframes one {
+  25% {
+    -webkit-transform: translateX(200%) translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateX(0%) translateY(-200%);
+  }
+  75% {
+    -webkit-transform: translateX(-200%) translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateX(0%) translateY(200%);
+  }
+}
 
 @keyframes two {
   25% {
@@ -52,6 +70,20 @@
   }
   100% {
     transform: translateX(0%) translateY(-200%);
+  }
+}
+@-webkit-keyframes two {
+  25% {
+    -webkit-transform: translateX(-200%) translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateX(0%) translateY(200%);
+  }
+  75% {
+    -webkit-transform: translateX(200%) translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateX(0%) translateY(-200%);
   }
 }
 

@@ -15,10 +15,12 @@
   top: 20px; }
 
 .hand-1 {
-  animation: spin 2s linear 0s infinite; }
+  animation: spin 2s linear 0s infinite;
+  -webkit-animation: spin 2s linear 0s infinite; }
 
 .hand-2 {
-  animation: antispin 2s linear 0s infinite; }
+  animation: antispin 2s linear 0s infinite;
+  -webkit-animation: antispin 2s linear 0s infinite; }
 
 .ball {
   position: absolute;
@@ -38,6 +40,12 @@
 @keyframes spin {
   100% {
     transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
 @keyframes antispin {
   100% {
     transform: rotate(-360deg); } }
+@-webkit-keyframes antispin {
+  100% {
+    -webkit-transform: rotate(-360deg); } }
