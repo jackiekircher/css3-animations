@@ -15,3 +15,5 @@ animations.
 **butterfly** - rotation in the same plane but different directions, centered on the same point
 
 **thread the needle** - like the butterfly but balls move back and forth between the background and foreground
+
+**mercedes** (triquetra vs extension) - one ball does a simple rotation while the other does an 3-petal antispin inside of it. both move at the same speed

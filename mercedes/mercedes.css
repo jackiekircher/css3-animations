@@ -1,0 +1,53 @@
+/* orange */
+/* blue */
+#animation {
+  margin: 8em auto; }
+
+.outside-spin {
+  position: relative;
+  height: 180px;
+  width: 180px;
+  margin: 50px auto;
+  -webkit-animation: spin 1.5s linear 0s infinite;
+  animation: spin 1.5s linear 0s infinite; }
+
+.inside-spin {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  left: 45px;
+  /* center horizontally */ }
+
+.hand-1 {
+  z-index: 100;
+  -webkit-animation: antispin 0.5s linear 0s infinite;
+  animation: antispin 0.5s linear 0s infinite; }
+
+.hand-2 {
+  z-index: 0; }
+
+.ball {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 30px;
+  border-radius: 50%; }
+
+.ball-1 {
+  background: #ff9500; }
+
+.ball-2 {
+  background: #1f31ff; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes antispin {
+  100% {
+    transform: rotate(-360deg); } }
+@-webkit-keyframes antispin {
+  100% {
+    -webkit-transform: rotate(-360deg); } }
