@@ -1,33 +1,29 @@
-$outer-diameter: 200px;
+$outer-diameter: 180px;
 $inner-diameter: $outer-diameter/2;
 $ball-diameter:  30px;
-$grid-padding:   20px;
 
 $color-1: rgba(255,149,0,1); /* orange */
 $color-2: rgba(31,49,255,1); /* blue */
 
 #animation {
-  height: $outer-diameter + $grid-padding*2;
-  width:  420px;
-  background-size: $ball-diameter $ball-diameter;
+  width:  $outer-diameter;
+  margin: 10em auto;
 }
 
 .outside-spin {
   position: relative;
   height: $outer-diameter;
   width:  $outer-diameter;
-  margin: 50px auto;
-  top: $grid-padding;
-  animation: spin 4s linear 0s infinite;
   -webkit-animation: spin 4s linear 0s infinite;
+          animation: spin 4s linear 0s infinite;
 }
 
 .inside-spin {
   position: absolute;
   height: $inner-diameter;
   width:  $inner-diameter;
-  animation: antispin 1s linear 0s infinite;
   -webkit-animation: antispin 1s linear 0s infinite;
+          animation: antispin 1s linear 0s infinite;
 }
 .hand-1 {
   left: $inner-diameter/2; /* center horizontally */
@@ -51,21 +47,6 @@ $color-2: rgba(31,49,255,1); /* blue */
 .ball-2 {
   background: $color-2;
   top: $inner-diameter - $ball-diameter;
-}
-
-.shadow {
-  position: relative;
-  top: -($outer-diameter + $grid-padding*2) - 10px;
-  opacity: 0.5;
-
-  .outside-spin {
-    animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s;
-  }
-  .inside-spin {
-    animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s;
-  }
 }
 
 @keyframes spin {

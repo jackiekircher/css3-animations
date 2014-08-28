@@ -1,33 +1,28 @@
-$grid-height: 240px;
-$grid-width:  420px;
-$circle-diameter: 200px;
+$circle-diameter: 180px;
 $ball-diameter:   40px;
 
-$color-1: rgba(255,149,0,0.8); /* orange */
-$color-2: rgba(31,49,255,0.8); /* blue */
+$color-1: rgba(255,149,0,1); /* orange */
+$color-2: rgba(31,49,255,1); /* blue */
 
 #animation {
   position: relative;
-  height: $grid-height;
-  width:  $grid-width;
-  background-size: $ball-diameter $ball-diameter;
-  margin: 50px auto;
+  height: $circle-diameter;
+  width:  $circle-diameter;
+  margin: 10em auto;
 }
 
 .inside-spin {
   position: absolute;
   height: $circle-diameter;
   width:  $circle-diameter;
-  left: $grid-width/2 - $circle-diameter/2;
-  top:  $grid-height/2 - $circle-diameter/2;
 }
 .hand-1 {
-  animation: spin 2s linear 0s infinite;
   -webkit-animation: spin 2s linear 0s infinite;
+          animation: spin 2s linear 0s infinite;
 }
 .hand-2 {
-  animation: antispin 2s linear 0s infinite;
   -webkit-animation: antispin 2s linear 0s infinite;
+          animation: antispin 2s linear 0s infinite;
 }
 
 .ball {

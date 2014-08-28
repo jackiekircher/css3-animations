@@ -1,43 +1,40 @@
 /* orange */
 /* blue */
 #animation {
-  height: 240px;
-  width: 420px;
-  background-size: 30px 30px; }
+  width: 180px;
+  margin: 10em auto; }
 
 .outside-spin {
   position: relative;
-  height: 200px;
-  width: 200px;
-  margin: 50px auto;
-  top: 20px;
-  animation: spin 4s linear 0s infinite;
-  -webkit-animation: spin 4s linear 0s infinite; }
+  height: 180px;
+  width: 180px;
+  -webkit-animation: spin 4s linear 0s infinite;
+  animation: spin 4s linear 0s infinite; }
 
 .inside-spin {
   position: absolute;
-  height: 100px;
-  width: 100px;
-  animation: antispin 1s linear 0s infinite;
-  -webkit-animation: antispin 1s linear 0s infinite; }
+  height: 90px;
+  width: 90px;
+  -webkit-animation: antispin 1s linear 0s infinite;
+  animation: antispin 1s linear 0s infinite; }
 
 .hand-1 {
-  left: 50px;
+  left: 45px;
   /* center horizontally */
   top: 0px;
   /* start at 12 o'clock */ }
 
 .hand-2 {
-  left: 50px;
+  left: 45px;
   /* center horizontally */
-  top: 100px;
+  top: 90px;
   /* start at 6 o'clock  */ }
 
 .ball {
   position: absolute;
   height: 30px;
   width: 30px;
-  left: 35px;
+  left: 30px;
   border-radius: 50%; }
 
 .ball-1 {
@@ -45,18 +42,7 @@
 
 .ball-2 {
   background: #1f31ff;
-  top: 70px; }
-
-.shadow {
-  position: relative;
-  top: -250px;
-  opacity: 0.5; }
-  .shadow .outside-spin {
-    animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s; }
-  .shadow .inside-spin {
-    animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s; }
+  top: 60px; }
 
 @keyframes spin {
   100% {

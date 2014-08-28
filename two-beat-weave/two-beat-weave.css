@@ -1,84 +1,75 @@
 #animation {
-  position: absolute;
-  height:   100%;
-  width:    100%;
+  position: relative;
+  width:  50px;
+  height: 50px;
+  margin: 10em auto;
 }
 
 .ball {
   position: absolute;
-  height:   50px;
-  width:    50px;
-  left:     50%;
-  top:      50%;
-}
-.ball:before {
-  content:  '';
-  position: absolute;
-  height:   100%;
-  width:    100%;
+  height:   40px;
+  width:    40px;
   left:    -100%;
-  top:     -110%;
+  top:      0%;
   z-index:  1;
-  margin-left:  -50%;
-  margin-top:   -50%;
   border-radius: 50%;
 }
 
-.ball-1:before {
+.ball-1 {
   background: rgba(255,149,0,1);
-  animation:  lead 4s infinite
-                -.5s cubic-bezier(0.25,0,0.75,1),
-              size 2s infinite
-                -1s cubic-bezier(0.25,0,0.75,1);
   -webkit-animation:  lead 4s infinite
                         -.5s cubic-bezier(0.25,0,0.75,1),
                       size 2s infinite
                         -1s cubic-bezier(0.25,0,0.75,1);
+          animation:  lead 4s infinite
+                        -.5s cubic-bezier(0.25,0,0.75,1),
+                      size 2s infinite
+                        -1s cubic-bezier(0.25,0,0.75,1);
 }
-.ball-2:before {
+.ball-2 {
   background: rgba(31,49,255,1);
-  animation: tail 4s infinite
-               0s cubic-bezier(0.25,0,0.75,1),
-             size 2s infinite
-               -.5s cubic-bezier(0.25,0,0.75,1);
   -webkit-animation: tail 4s infinite
                        0s cubic-bezier(0.25,0,0.75,1),
                      size 2s infinite
                        -.5s cubic-bezier(0.25,0,0.75,1);
+          animation:  tail 4s infinite
+                        0s cubic-bezier(0.25,0,0.75,1),
+                      size 2s infinite
+                        -.5s cubic-bezier(0.25,0,0.75,1);
 }
 
 @keyframes lead {
   15%  { left: -100%; }
-  25%  { top:   110%; z-index: 100; } /* bottom right */
-  50%  { top:  -110%; z-index: 0; }   /* top left */
+  25%  { top:   220%; z-index: 100; } /* bottom right */
+  50%  { top:     0%; z-index: 0; }   /* top left */
   65%  { left:  100%; }
-  75%  { top:   110%; z-index: 100; } /* bottom left */
-  100% { top:  -110%; z-index: 0; }   /* top right */
+  75%  { top:   220%; z-index: 100; } /* bottom left */
+  100% { top:     0%; z-index: 0; }   /* top right */
 }
 @-webkit-keyframes lead {
   15%  { left: -100%; }
-  25%  { top:   110%; z-index: 100; } /* bottom right */
-  50%  { top:  -110%; z-index: 0; }   /* top left */
+  25%  { top:   220%; z-index: 100; } /* bottom right */
+  50%  { top:     0%; z-index: 0; }   /* top left */
   65%  { left:  100%; }
-  75%  { top:   110%; z-index: 100; } /* bottom left */
-  100% { top:  -110%; z-index: 0; }   /* top right */
+  75%  { top:   220%; z-index: 100; } /* bottom left */
+  100% { top:     0%; z-index: 0; }   /* top right */
 }
 
 @keyframes tail {
   15%  { left: -100%; }
-  25%  { top:   110%; z-index: 0; }   /* bottom right */
-  50%  { top:  -110%; z-index: 100; } /* top left */
+  25%  { top:   220%; z-index: 0; }   /* bottom right */
+  50%  { top:     0%; z-index: 100; } /* top left */
   65%  { left:  100%; }
-  75%  { top:   110%; z-index: 0; }   /* bottom left */
-  100% { top:  -110%; z-index: 100; } /* top right */
+  75%  { top:   220%; z-index: 0; }   /* bottom left */
+  100% { top:     0%; z-index: 100; } /* top right */
 }
 @-webkit-keyframes tail {
   15%  { left: -100%; }
-  25%  { top:   110%; z-index: 0; }   /* bottom right */
-  50%  { top:  -110%; z-index: 100; } /* top left */
+  25%  { top:   220%; z-index: 0; }   /* bottom right */
+  50%  { top:     0%; z-index: 100; } /* top left */
   65%  { left:  100%; }
-  75%  { top:   110%; z-index: 0; }   /* bottom left */
-  100% { top:  -110%; z-index: 100; } /* top right */
+  75%  { top:   220%; z-index: 0; }   /* bottom left */
+  100% { top:     0%; z-index: 100; } /* top right */
 }
 
 @keyframes size {

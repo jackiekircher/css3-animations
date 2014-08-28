@@ -1,13 +1,13 @@
 /* orange */
 /* blue */
 #animation {
-  margin: 8em auto; }
+  width: 180px;
+  margin: 10em auto; }
 
 .outside-spin {
   position: relative;
   height: 180px;
   width: 180px;
-  margin: 50px auto;
   -webkit-animation: spin 1.5s linear 0s infinite;
   animation: spin 1.5s linear 0s infinite; }
 

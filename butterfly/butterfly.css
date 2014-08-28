@@ -2,39 +2,36 @@
 /* blue */
 #animation {
   position: relative;
-  height: 240px;
-  width: 420px;
-  background-size: 40px 40px;
-  margin: 50px auto; }
+  height: 180px;
+  width: 180px;
+  margin: 10em auto; }
 
 .inside-spin {
   position: absolute;
-  height: 200px;
-  width: 200px;
-  left: 110px;
-  top: 20px; }
+  height: 180px;
+  width: 180px; }
 
 .hand-1 {
-  animation: spin 2s linear 0s infinite;
-  -webkit-animation: spin 2s linear 0s infinite; }
+  -webkit-animation: spin 2s linear 0s infinite;
+  animation: spin 2s linear 0s infinite; }
 
 .hand-2 {
-  animation: antispin 2s linear 0s infinite;
-  -webkit-animation: antispin 2s linear 0s infinite; }
+  -webkit-animation: antispin 2s linear 0s infinite;
+  animation: antispin 2s linear 0s infinite; }
 
 .ball {
   position: absolute;
   height: 40px;
   width: 40px;
-  left: 80px;
+  left: 70px;
   border-radius: 50%; }
 
 .ball-1 {
-  background: rgba(255, 149, 0, 0.8);
+  background: #ff9500;
   z-index: 100; }
 
 .ball-2 {
-  background: rgba(31, 49, 255, 0.8);
+  background: #1f31ff;
   z-index: 0; }
 
 @keyframes spin {
