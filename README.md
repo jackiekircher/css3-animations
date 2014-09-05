@@ -6,14 +6,14 @@ animations.
 
 **diamond** - a simple alternating diamond pattern
 
-**anitspin** - 4-petal pattern where the inner rotation is in the opposite direction of the outer rotation
+**anitspin** - a 4-petal pattern where each sphere is part of an inner rotation that itself is part on outer rotation in the opposite direction.
 
-**2-beat weave** - circular pattern that moves between the background and foreground, alternating sides
+**two-beat weave** - a circular pattern that moves between the background and foreground while alternating sides
 
-**3-beat weave** - like the 2-beat weave only with an assymetrical pattern where each ball stays on one side longer than the other
+**three-beat weave** - a similar pattern to the two-beat weave only each sphere does two rotations on one side and one on the opposite
 
-**butterfly** - rotation in the same plane but different directions, centered on the same point
+**butterfly** - two spheres rotating in the same plane but in different directions, centered on the same point
 
-**thread the needle** - like the butterfly but balls move back and forth between the background and foreground
+**thread the needle** - a similar pattern to the butterfly but each sphere moves back and forth between the background and foreground
 
-**mercedes** (triquetra vs extension) - one ball does a simple rotation while the other does an 3-petal antispin inside of it. both move at the same speed
+**mercedes** (triquetra vs extension) - one sphere does a simple rotation while the other does an 3-petal antispin inside of it. both move at the same speed

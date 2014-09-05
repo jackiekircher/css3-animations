@@ -5,9 +5,20 @@ $ball-diameter:  30px;
 $color-1: rgba(255,149,0,1); /* orange */
 $color-2: rgba(31,49,255,1); /* blue */
 
+h1 {
+  text-align: center;
+  margin: 2em auto;
+}
+
 #animation {
   width:  $outer-diameter;
-  margin: 10em auto;
+  margin: 90px auto;
+}
+
+#caption {
+  width:  300px;
+  text-align: center;
+  margin: 1em auto;
 }
 
 .outside-spin {
