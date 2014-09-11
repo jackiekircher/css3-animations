@@ -1,17 +1,7 @@
 /* orange */
 /* blue */
-h1 {
-  text-align: center;
-  margin: 2em auto; }
-
 #animation {
-  width: 180px;
-  margin: 90px auto; }
-
-#caption {
-  width: 300px;
-  text-align: center;
-  margin: 1em auto; }
+  width: 180px; }
 
 .outside-spin {
   position: relative;
@@ -65,3 +55,5 @@ h1 {
 @-webkit-keyframes antispin {
   100% {
     -webkit-transform: rotate(-360deg); } }
+
+/*# sourceMappingURL=antispin.css.map */

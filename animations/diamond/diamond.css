@@ -1,19 +1,7 @@
-h1 {
-  text-align: center;
-  margin: 2em auto;
-}
-
 #animation {
   position: relative;
   width:  180px;
   height: 180px;
-  margin: 90px auto;
-}
-
-#caption {
-  width:  300px;
-  text-align: center;
-  margin: 1em auto;
 }
 
 .ball {

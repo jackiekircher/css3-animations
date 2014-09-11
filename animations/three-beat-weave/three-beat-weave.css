@@ -1,26 +1,15 @@
-h1 {
-  text-align: center;
-  margin: 2em auto;
-}
-
 #animation {
   position: relative;
-  width:  50px;
-  height: 50px;
-  margin: 90px auto 220px;
-}
-
-#caption {
-  width:  300px;
-  text-align: center;
-  margin: 1em auto;
+  width:  100px;
+  height: 110px;
+  margin: 90px auto;
 }
 
 .ball {
   position: absolute;
   height:   40px;
   width:    40px;
-  left:    -100%;
+  left:    -25%;
   top:      0%;
   z-index:  1;
   border-radius: 50%;
@@ -51,59 +40,59 @@ h1 {
 
 @keyframes lead {
   /* 0% top left */
-  8.3%   { left: -100%; }
-  16.7%  { left: -100%;
-           top:   220%; z-index: 0; }   /* bottom left */
-  25%    { left: -100%; }
-  33.3%  { left: -100%;
+  8.3%   { left:  -25%; }
+  16.7%  { left:  -25%;
+           top:   100%; z-index: 0; }   /* bottom left */
+  25%    { left:  -25%; }
+  33.3%  { left:  -25%;
            top:     0%; z-index: 100; } /* top left */
-  41.7%  { left: -100%; }
-  50%    { top:   220%; z-index: 0; }   /* bottom left */
+  41.7%  { left:  -25%; }
+  50%    { top:   100%; z-index: 0; }   /* bottom left */
   66.7%  { top:     0%; z-index: 0; }   /* top right */
-  75%    { left:  100%; }
-  83.3%  { top:   220%; z-index: 0; }   /* bottom right */
+  75%    { left:   75%; }
+  83.3%  { top:   100%; z-index: 0; }   /* bottom right */
 }
 @-webkit-keyframes lead {
   /* 0% top left */
-  8.3%   { left: -100%; }
-  16.7%  { left: -100%;
-           top:   220%; z-index: 0; }   /* bottom left */
-  25%    { left: -100%; }
-  33.3%  { left: -100%;
+  8.3%   { left:  -25%; }
+  16.7%  { left:  -25%;
+           top:   100%; z-index: 0; }   /* bottom left */
+  25%    { left:  -25%; }
+  33.3%  { left:  -25%;
            top:     0%; z-index: 100; } /* top left */
-  41.7%  { left: -100%; }
-  50%    { top:   220%; z-index: 0; }   /* bottom left */
+  41.7%  { left:  -25%; }
+  50%    { top:   100%; z-index: 0; }   /* bottom left */
   66.7%  { top:     0%; z-index: 0; }   /* top right */
-  75%    { left:  100%; }
-  83.3%  { top:   220%; z-index: 0; }   /* bottom right */
+  75%    { left:   75%; }
+  83.3%  { top:   100%; z-index: 0; }   /* bottom right */
 }
 
 @keyframes tail {
   /* 0% top left */
-  8.3%  { left: -100%; }
-  16.7% { top:   220%; z-index: 0; }   /* bottom left */
+  8.3%  { left:  -25%; }
+  16.7% { top:   100%; z-index: 0; }   /* bottom left */
   33.3% { top:     0%; z-index: 100; } /* top right */
-  41.7% { left:  100%; }
-  50%   { left:  100%;
-          top:   220%; z-index: 0; }   /* bottom right */
-  66.7% { left:  100%;
+  41.7% { left:   75%; }
+  50%   { left:   75%;
+          top:   100%; z-index: 0; }   /* bottom right */
+  66.7% { left:   75%;
           top:     0%; z-index: 100; } /* top right */
-  75%   { left: 100%; }
-  83.3% { top:   220%; z-index: 0; }   /* bottom right */
+  75%   { left:   75%; }
+  83.3% { top:   100%; z-index: 0; }   /* bottom right */
   100%  { top:     0%; z-index: 100; } /* top left */
 }
 @-webkit-keyframes tail {
   /* 0% top left */
-  8.3%  { left: -100%; }
-  16.7% { top:   220%; z-index: 0; }   /* bottom left */
+  8.3%  { left:  -25%; }
+  16.7% { top:   100%; z-index: 0; }   /* bottom left */
   33.3% { top:     0%; z-index: 100; } /* top right */
-  41.7% { left:  100%; }
-  50%   { left:  100%;
-          top:   220%; z-index: 0; }   /* bottom right */
-  66.7% { left:  100%;
+  41.7% { left:   75%; }
+  50%   { left:   75%;
+          top:   100%; z-index: 0; }   /* bottom right */
+  66.7% { left:   75%;
           top:     0%; z-index: 100; } /* top right */
-  75%   { left: 100%; }
-  83.3% { top:   220%; z-index: 0; }   /* bottom right */
+  75%   { left:   75%; }
+  83.3% { top:   100%; z-index: 0; }   /* bottom right */
   100%  { top:     0%; z-index: 100; } /* top left */
 }
 
